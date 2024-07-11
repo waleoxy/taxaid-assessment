@@ -1,7 +1,7 @@
 import axios, { AxiosResponse, isAxiosError, Axios, AxiosError } from "axios";
 
 export const axiosInstance: Axios = axios.create({
-  baseURL: import.meta.env.BASE_URL,
+  baseURL: "https://taxaid-assessment.onrender.com/api/",
 });
 
 const shipmentService = {
