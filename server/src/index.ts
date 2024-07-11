@@ -13,8 +13,6 @@ const app: Express = express();
 app.use(express.json());
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, "build")));
-
 app.use("/api/shipments", shipmentRouter);
 
 const bootupServer = async () => {
@@ -25,10 +23,6 @@ const bootupServer = async () => {
       authMechanism: "DEFAULT",
     });
     console.log("MongoDb connection successful");
-
-    app.get("/*", function (req: Request, res: Response) {
-      res.sendFile(path.join(__dirname, "build", "index.html"));
-    });
 
     app.get("/", (req: Request, res: Response) => {
       res.status(200).json({ message: "Server is up and running" });
