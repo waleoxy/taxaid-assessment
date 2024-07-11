@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import * as z from "zod";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import shipmentService from "../services";
+import shipmentService from "../api";
 
 const formSchema = z.object({
   name: z.string().min(3, { message: "Must be 3 or more characters" }),

@@ -1,6 +1,6 @@
 import { Trash } from "lucide-react";
 import { Link } from "react-router-dom";
-import shipmentService from "../services";
+import shipmentService from "../api";
 
 const ShipmentComponent = ({
   id,

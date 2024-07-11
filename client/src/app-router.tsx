@@ -6,7 +6,7 @@ import {
 import RootLayoot from "./layout/root";
 import ErrorPage from "./pages/error";
 import ShipmentHome from "./pages/shipment-home";
-import shipmentService from "./services";
+import shipmentService from "./api";
 import ShipmentDetails from "./pages/shipment-details";
 import Login from "./pages/login";
 import ShipmentLayout from "./layout/shipmentLayout";
