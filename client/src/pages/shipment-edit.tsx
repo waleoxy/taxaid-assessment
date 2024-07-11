@@ -1,5 +1,5 @@
 import { AxiosResponse } from "axios";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import * as z from "zod";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -15,6 +15,8 @@ const formSchema = z.object({
 const ShipmentEdit = () => {
   const loadedData = useLoaderData();
   const { data } = loadedData as AxiosResponse;
+
+  const navigate = useNavigate();
 
   const {
     register,
@@ -36,7 +38,7 @@ const ShipmentEdit = () => {
   ): Promise<void> => {
     try {
       await shipmentService.updateShipment(data._id, values);
-      window.location.assign("/shipments");
+      navigate("shipments");
     } catch (error) {}
   };
 
