@@ -7,7 +7,7 @@ import shipmentRouter from "./routes/shipmentRoute";
 
 const PORT = config.PORT;
 
-const app: Express = express();
+const app = express();
 
 app.use(express.json());
 app.use(cors());
@@ -22,7 +22,7 @@ const bootupServer = async () => {
     });
     console.log("MongoDb connection successful");
 
-    app.get("/", (req: Request, res: Response) => {
+    app.get("/", (req, res) => {
       res.status(200).json({ message: "Server is up and running" });
     });
 
