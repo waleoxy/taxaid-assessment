@@ -38,7 +38,7 @@ const ShipmentEdit = () => {
   ): Promise<void> => {
     try {
       await shipmentService.updateShipment(data._id, values);
-      navigate("shipments");
+      navigate("/shipments");
     } catch (error) {}
   };
 
