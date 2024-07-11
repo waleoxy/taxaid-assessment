@@ -1,7 +1,7 @@
 import axios, { AxiosResponse, isAxiosError, Axios, AxiosError } from "axios";
 
 export const axiosInstance: Axios = axios.create({
-  baseURL: "http://localhost:8080/api/",
+  baseURL: import.meta.env.BASE_URL,
 });
 
 const shipmentService = {
